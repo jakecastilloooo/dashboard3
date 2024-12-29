@@ -47,7 +47,7 @@ const transactions = [
 export default function TransactionsPage() {
   return (
     <div className="space-y-4">
-      <Card className="bg-gray-950/50">
+      <Card className="bg-[#212b35] border border-[#2a3643]">
         <CardHeader>
           <CardTitle>Cashflow</CardTitle>
           <div className="text-2xl font-bold">$2,100.00</div>
@@ -64,7 +64,7 @@ export default function TransactionsPage() {
           </ResponsiveContainer>
         </CardContent>
       </Card>
-      <Card className="bg-gray-950/50">
+      <Card className="bg-[#212b35] border border-[#2a3643]">
         <CardHeader>
           <CardTitle>Recent Transactions</CardTitle>
         </CardHeader>
@@ -99,4 +99,3 @@ export default function TransactionsPage() {
     </div>
   )
 }
-

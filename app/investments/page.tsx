@@ -19,7 +19,7 @@ export default function InvestmentsPage() {
 
   return (
     <div className="space-y-4">
-      <Card className="bg-gray-950/50">
+      <Card className="bg-[#212b35] border border-[#2a3643]">
         <CardContent className="p-6">
           <div className="h-[300px]">
             <ResponsiveContainer width="100%" height="100%">
@@ -53,7 +53,7 @@ export default function InvestmentsPage() {
           </div>
         </CardContent>
       </Card>
-      <Card className="bg-gray-950/50">
+      <Card className="bg-[#212b35] border border-[#2a3643]">
         <CardHeader>
           <CardTitle>Portfolio: ${total.toFixed(2)}</CardTitle>
         </CardHeader>
@@ -61,14 +61,14 @@ export default function InvestmentsPage() {
           <div className="relative overflow-x-auto">
             <table className="w-full text-left">
               <thead>
-                <tr className="border-b border-gray-800">
+                <tr className="border-b border-[#2a3643]">
                   <th className="pb-4">Name</th>
                   <th className="pb-4">Type</th>
                   <th className="pb-4 text-right">Value</th>
                   <th className="pb-4 text-right">Allocation</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-800">
+              <tbody className="divide-y divide-[#2a3643]">
                 {cryptoHoldings.map((holding) => (
                   <tr key={holding.name}>
                     <td className="py-4">{holding.name}</td>
@@ -85,4 +85,3 @@ export default function InvestmentsPage() {
     </div>
   )
 }
-

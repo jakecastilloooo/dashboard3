@@ -15,7 +15,7 @@ export default function AnalyticsPage() {
 
   return (
     <div className="space-y-4">
-      <Card className="bg-gray-950/50">
+      <Card className="bg-[#212b35] border border-[#2a3643]">
         <CardHeader>
           <CardTitle>Spending by Category</CardTitle>
         </CardHeader>
@@ -55,4 +55,3 @@ export default function AnalyticsPage() {
     </div>
   )
 }
-

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-black text-white overflow-x-hidden;
+  @apply bg-[#141c24] text-white overflow-x-hidden;
 }
 
 * {

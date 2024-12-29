@@ -21,7 +21,7 @@ export default function AssetsPage() {
 
   return (
     <div className="space-y-4">
-      <Card className="bg-gray-950/50">
+      <Card className="bg-[#212b35] border border-[#2a3643]">
         <CardContent className="p-6">
           <div className="h-[300px]">
             <ResponsiveContainer width="100%" height="100%">
@@ -55,7 +55,7 @@ export default function AssetsPage() {
           </div>
         </CardContent>
       </Card>
-      <Card className="bg-gray-950/50">
+      <Card className="bg-[#212b35] border border-[#2a3643]">
         <CardHeader>
           <CardTitle>Asset Details</CardTitle>
         </CardHeader>
@@ -63,14 +63,14 @@ export default function AssetsPage() {
           <div className="relative overflow-x-auto">
             <table className="w-full text-left">
               <thead>
-                <tr className="border-b border-gray-800">
+                <tr className="border-b border-[#2a3643]">
                   <th className="pb-4">Name</th>
                   <th className="pb-4">Type</th>
                   <th className="pb-4 text-right">Value</th>
                   <th className="pb-4 text-right">% of Total</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-800">
+              <tbody className="divide-y divide-[#2a3643]">
                 {assetDetails.map((asset) => (
                   <tr key={asset.name}>
                     <td className="py-4">{asset.name}</td>
@@ -87,4 +87,3 @@ export default function AssetsPage() {
     </div>
   )
 }
-
