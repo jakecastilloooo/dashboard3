@@ -68,54 +68,50 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </div>
 
-      {/* Mobile sidebar */}
-      <Sheet open={open} onOpenChange={setOpen}>
-        <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <Menu className="h-6 w-6" />
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="left" className="w-64 bg-[#212b35] p-0">
-          <div className="flex h-16 items-center gap-2 border-b border-[#2a3643] px-4">
-            <PiggyBank className="h-6 w-6" />
-            <span className="font-semibold">Finance Dashboard</span>
-          </div>
-          <div className="flex flex-col gap-6 p-4">
-            {navigation.map((group) => (
-              <div key={group.title}>
-                <div className="mb-2 text-sm font-medium text-gray-400">{group.title}</div>
-                <div className="flex flex-col gap-1">
-                  {group.links.map((link) => {
-                    const Icon = link.icon
-                    return (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        onClick={() => setOpen(false)}
-                        className={cn(
-                          "flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition-colors hover:bg-[#2a3643]",
-                          pathname === link.href ? "bg-[#2a3643] text-white" : "text-gray-400"
-                        )}
-                      >
-                        <Icon className="h-4 w-4" />
-                        {link.title}
-                      </Link>
-                    )
-                  })}
-                </div>
-              </div>
-            ))}
-          </div>
-        </SheetContent>
-      </Sheet>
-
       {/* Main content */}
       <div className="flex-1">
         <header className="flex h-16 items-center border-b border-[#2a3643]">
           <div className="flex w-full px-4 md:px-6">
-            <Button variant="ghost" size="icon" className="mr-2 md:hidden">
-              <Menu className="h-6 w-6" />
-            </Button>
+            {/* Single mobile menu button */}
+            <Sheet open={open} onOpenChange={setOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="mr-2 md:hidden">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left" className="w-64 bg-[#212b35] p-0">
+                <div className="flex h-16 items-center gap-2 border-b border-[#2a3643] px-4">
+                  <PiggyBank className="h-6 w-6" />
+                  <span className="font-semibold">Finance Dashboard</span>
+                </div>
+                <div className="flex flex-col gap-6 p-4">
+                  {navigation.map((group) => (
+                    <div key={group.title}>
+                      <div className="mb-2 text-sm font-medium text-gray-400">{group.title}</div>
+                      <div className="flex flex-col gap-1">
+                        {group.links.map((link) => {
+                          const Icon = link.icon
+                          return (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              onClick={() => setOpen(false)}
+                              className={cn(
+                                "flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition-colors hover:bg-[#2a3643]",
+                                pathname === link.href ? "bg-[#2a3643] text-white" : "text-gray-400"
+                              )}
+                            >
+                              <Icon className="h-4 w-4" />
+                              {link.title}
+                            </Link>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
             <div className="flex flex-1 items-center gap-4">
               <div className="flex-1 md:ml-auto md:w-80">
                 <div className="relative">
@@ -133,10 +129,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <Image
                   alt="Profile"
                   className="rounded-full object-cover"
-                  height="32"
-                  width="32"
+                  height={128}
+                  width={128}
                   src="/profile.jpg"
                   priority
+                  style={{
+                    maxWidth: "32px",
+                    maxHeight: "32px"
+                  }}
                 />
               </Button>
             </div>
