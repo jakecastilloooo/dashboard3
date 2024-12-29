@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white overflow-x-hidden;
+}
+
+* {
+  @apply box-border;
+}
+
+.recharts-wrapper {
+  @apply !w-full;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .pie-chart-container {
+    flex-direction: column !important;
+  }
+  
+  .progress-bar {
+    height: 8px !important;
+  }
+  
+  .table-cell {
+    padding: 16px 12px !important;
+  }
+  
+  .chart-container {
+    height: 300px !important;
+  }
+}
+
