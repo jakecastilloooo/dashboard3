@@ -5,7 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Bell, ChevronUp, ChevronDown, Menu, PiggyBank, Search, BarChart3, Wallet, LineChart, CircleDollarSign } from 'lucide-react'
+import { Bell, ChevronUp, Menu, PiggyBank, Search, BarChart3, Wallet, LineChart, CircleDollarSign } from 'lucide-react'
 import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
